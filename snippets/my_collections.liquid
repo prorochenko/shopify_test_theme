@@ -30,11 +30,8 @@
       var selectedOption = selectElement.options[selectElement.selectedIndex];
       var selectedPrice = selectedOption.getAttribute('data-variant-price');
 
-      priceElement.innerText = selectedPrice 
+      priceElement.innerText = "{{ selectedPrice}}" 
     });
-      function formatCurrency(amount, currencySymbol) {
-    var formattedAmount = parseFloat(amount).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$& ');
-    return currencySymbol + formattedAmount;
-  }
-  });
+
+ });
 </script>
