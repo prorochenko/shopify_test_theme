@@ -1,6 +1,6 @@
+
+
 <div class="customCollection">
-
-
 <ul class="customList">
 {%for product in section.settings.collection.products %}
 <li class="customItem">
@@ -9,9 +9,11 @@
   {% endif %}
   <h3>{{ product.title }}</h3>
   <p class="customDescription">{{ product.description }}</p>
-  <p>{{ product.variants.price | money }}</p>
+  {% assign customPrice =  product.price %}
+  <p>{{ customPrice | money }}</p>
   <select class="customSelect" name="Sort_ByColor" id="SortByColor">
 {% for product in product.variants %}
+  {% assign customPrice = product.price  %}
 <option   value="{{ product.title | escape }}"  {% if option.value == Sort_ByColor %}
                         selected="selected"
                       {% endif %}>{{ product.title}}</option>
