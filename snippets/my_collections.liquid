@@ -7,12 +7,13 @@
         {% endif %}
         <h3>{{ product.title }}</h3>
         <p class="customDescription">{{ product.description }}</p>
-      
-      {% form 'product', product %}
-        {% assign customPrice = product.price %}
-         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
         
-        <select class="customSelect" name="Sort_ByColor" id="SortByColor">
+       {% assign customPrice = product.price %}
+        <p id="customPrice">{{ customPrice | money_with_currency }}</p>
+        
+        {% form 'product', product %}
+            
+                <select class="customSelect" name="Sort_ByColor" id="SortByColor">
           {% for variant in product.variants %}
             <option value="{{ variant.title | escape }}" data-variant-price="{{ variant.price }}">{{ variant.title }}</option>
           {% endfor %}
