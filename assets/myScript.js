@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
-
+let formData = new FormData(addToCartForms);
 
 addToCartForms.forEach((form) => {
   form.addEventListener("submit", (event) => {
