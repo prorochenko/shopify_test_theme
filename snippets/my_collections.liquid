@@ -18,12 +18,13 @@
         {% endif %}
 
         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
+         {{ product.variants[0].featured_image.src }}
 <!--        some -->
         {% form 'product', product %}
    <div class="customOptions"> 
           <label class="product-option">Options</label>
         <select class="customSelect" name="id" id="SortByColor">
-            
+           
             {% for variant in product.variants %}
               <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}" data-variant-image="{{ variant.featured_image.src }}">
                 {{ variant.title }}
