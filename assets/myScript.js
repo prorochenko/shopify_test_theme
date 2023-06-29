@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
   let selectElement = document.getElementById('SortByColor');
   let priceElement = document.getElementById('customPrice');
-  let quantityInput = document.getElementById('quantity')
+  let quantityInput = document.getElementById('quantity');
+  let image = document.getElementById('image');
   
   selectElement.addEventListener('change', function() {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
     let selectedPrice = selectedOption.getAttribute('data-variant-price');
     let quantity = quantityInput.value;
-
+    let imageSrc = image.src;
+    console.log(imageSrc)
     let qntMultPrc = quantity * selectedPrice;
 
     let formattedPrice = formatCurrency(qntMultPrc);
