@@ -30,7 +30,7 @@
       var selectedOption = selectElement.options[selectElement.selectedIndex];
       var selectedPrice = selectedOption.getAttribute('data-variant-price');
 
-      priceElement.innerText = "{{ selectedPrice | money_with_currency }}"
+      priceElement.innerText = {{ selectedPrice | money_with_currency }}
     });
   });
 </script>
