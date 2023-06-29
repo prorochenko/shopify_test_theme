@@ -1,9 +1,11 @@
 <div class="customCollection">
 
 
-  <h2>{{ collection.title }}</h2>
-{%for product in section.settings.collection.products %} {% if product.featured_image%}
-  <img className="customImage" width="300" height="300" src="{{ product | image_url }}" alt="product"/>
+<ul class="customList">
+{%for product in section.settings.collection.products %}
+<li>
+  {% if product.featured_image%}
+    <img class="customImage" width="300" height="300" src="{{ product | image_url }}" alt="product"/>
   {% endif %}
   <h3>{{ product.title }}</h3>
   <p>{{ product.description }}</p>
@@ -15,8 +17,10 @@
                       {% endif %}>{{ product.title}}</option>
   {% endfor %}
   </select>
+</li>
   {%endfor%}
-
+ 
+</ul>
 </div>
 
   {{ section.settings.collection.products | json }}
