@@ -160,9 +160,12 @@ assign show_desktop_slider = true endif -%}
   </div>
 </div>
 
-{% render "my_collections"%} {% schema %} { "name": "t:sections.featured-collection.name", "tag":
-"section", "class": "section", "disabled_on": { "groups": ["header", "footer"] }, "settings": [ {
-"type": "inline_richtext", "id": "title", "default": "Featured collection", "label":
+{% render "my_collections"%}
+{{ hello }}
+
+{% schema %} { "name": "t:sections.featured-collection.name", "tag": "section", "class": "section",
+"disabled_on": { "groups": ["header", "footer"] }, "settings": [ { "type": "inline_richtext", "id":
+"title", "default": "Featured collection", "label":
 "t:sections.featured-collection.settings.title.label" }, { "type": "select", "id": "heading_size",
 "options": [ { "value": "h2", "label": "t:sections.all.heading_size.options__1.label" }, { "value":
 "h1", "label": "t:sections.all.heading_size.options__2.label" }, { "value": "h0", "label":
