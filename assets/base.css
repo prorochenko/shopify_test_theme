@@ -3352,5 +3352,6 @@ details-disclosure > details {
 
 .customList{
   display:flex;
-  
+  flex-wrap: wrap;
+  list-style-type: none;
 }
