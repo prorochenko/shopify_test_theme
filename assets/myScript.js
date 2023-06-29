@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let quantity = parseInt(quantityInput.value);
    
     let qntandprice = quantity*selectedPrice;
-    console.log(qntandprice)
+    console.log(quantity, selectedPrice)
     let formattedPrice = formatCurrency(qntandprice);
     
 console.log("quantity", typeof(quantity))
