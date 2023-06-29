@@ -9,11 +9,9 @@
         <p class="customDescription">{{ product.description }}</p>
         {% assign customPrice = product.price %}
         
-        <select class="customSelect" name="Sort_ByColor" id="SortByColor" data-product-price="{{ customPrice }}">
+        <select class="customSelect" name="Sort_ByColor" id="SortByColor">
           {% for variant in product.variants %}
-            <option value="{{ variant.title | escape }}" {% if option.value == Sort_ByColor %}
-              selected="selected"
-            {% endif %}>{{ variant.title }}</option>
+            <option value="{{ variant.title | escape }}" data-variant-price="{{ variant.price }}">{{ variant.title }}</option>
           {% endfor %}
         </select>
         
@@ -22,6 +20,7 @@
     {% endfor %}
   </ul>
 </div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var selectElement = document.getElementById('SortByColor');
@@ -35,4 +34,3 @@
     });
   });
 </script>
-  {{ section.settings.collection.products | json }}
