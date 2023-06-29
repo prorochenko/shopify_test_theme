@@ -3369,3 +3369,12 @@ details-disclosure > details {
   overflow: auto;
   margin: 5 0;
 }
+.customButton{
+  
+}
+
+.added-to-cart {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+}
