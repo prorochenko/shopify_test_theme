@@ -3361,3 +3361,6 @@ details-disclosure > details {
 .customItem{
     width:300px;
 }
+.customSelect{
+  margin-left: 15px;
+}
