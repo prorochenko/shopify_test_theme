@@ -15,7 +15,7 @@
           {% endfor %}
         </select>
         
-        <p id="customPrice">{{ customPrice | money }}</p>
+        <p id="customPrice">{{ customPrice | money_with_currency }}</p>
       </li>
     {% endfor %}
   </ul>
