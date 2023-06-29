@@ -54,7 +54,7 @@
        <button class="button product-add" type="submit">Add to cart</button>
      {% endform %}
       <form method="post" action="/cart/add">
-  <input type="hidden" name="id" value="{{ product }}" />
+  <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
 
   <input min="1" type="number" id="quantity" name="quantity" value="1"/>
 
