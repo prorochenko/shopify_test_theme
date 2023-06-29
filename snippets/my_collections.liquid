@@ -25,7 +25,7 @@
    <div class="customOptions"> 
           <label class="product-option">Options</label>
           <select class="customSelect" name="id" id="SortByColor">
-             {{ product.variants|json }}
+             {{ product.variants | json }}
             {% for variant in product.variants %}
              
               <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}">
