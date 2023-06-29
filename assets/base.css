@@ -3367,4 +3367,5 @@ details-disclosure > details {
   font-size: 10px;
   width:300px;
   overflow: auto;
+  margin: 5 0;
 }
