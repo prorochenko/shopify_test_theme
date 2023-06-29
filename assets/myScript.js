@@ -21,17 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     return "₴" + formattedAmount + " UAH";
   }
 
-  // Обработчик события для увеличения количества
-  document.querySelectorAll('.quantity__button[name="plus"]').forEach((btn) => btn.addEventListener('click', function() {
-
-    selectElement.dispatchEvent(new Event('change'));
-  }));
-
-  // Обработчик события для уменьшения количества
-  document.querySelectorAll('.quantity__button[name="minus"]').forEach((btn) => btn.addEventListener('click', function() {
-
-    selectElement.dispatchEvent(new Event('change'));
-  }));
+ 
   
 });
 
