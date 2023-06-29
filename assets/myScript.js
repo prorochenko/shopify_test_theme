@@ -25,7 +25,11 @@ addToCartForms.forEach((form) => {
     event.preventDefault();
 await fetch(window.Shopify.routes.root + 'cart/add.js', {
   method: 'POST',
-  body: new FormData(document.querySelectorAll('form[action="/cart/add"]'))
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(formData)
+
 })
   });
 });
