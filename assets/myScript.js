@@ -24,14 +24,10 @@ addToCartForms.forEach((form) => {
 
     event.preventDefault();
 
-    await fetch("/cart/add.js", {
+    await fetch(window.Shopify.routes.root + 'cart/add.js', {
       method: "post",
       body: new FormData(form),
-      headers: {
-      'Content-Type': 'application/json',
-      'X-Requested-With':'xmlhttprequest' /* XMLHttpRequest is ok too, it's case insensitive */
-    },
-    });
+     });
 
   });
 });
