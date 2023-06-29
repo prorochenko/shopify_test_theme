@@ -22,7 +22,8 @@
         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
         
         {% form 'product', product %}
-            
+
+          
                 <select class="customSelect" name="id" id="SortByColor">
           {% for variant in product.variants %}
             <option value="{{ variant.title | escape }}" data-variant-price="{{ variant.price }}">{{ variant.title }}</option>
