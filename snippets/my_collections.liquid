@@ -18,7 +18,7 @@
         
          {% assign customPrice = product.price %}
         {% endif %}
- {{ product.variants | json }}
+
         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
 <!--        some -->
         {% form 'product', product %}
