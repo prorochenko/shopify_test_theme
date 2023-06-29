@@ -9,8 +9,7 @@
   {% endif %}
   <h3>{{ product.title }}</h3>
   <p class="customDescription">{{ product.description }}</p>
-  {% assign customPrice =  product.price %}
-  <p>{{ customPrice | money }}</p>
+    {% assign customPrice =  product.price %}
   <select class="customSelect" name="Sort_ByColor" id="SortByColor">
 {% for product in product.variants %}
   {% assign customPrice = product.price  %}
@@ -19,6 +18,9 @@
                       {% endif %}>{{ product.title}}</option>
   {% endfor %}
   </select>
+
+  <p>{{ customPrice | money }}</p>
+  
 </li>
   {%endfor%}
  
