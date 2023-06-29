@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedPrice = selectedOption.getAttribute('data-letiant-price');
     let quantity = parseInt(quantityInput.value);
    
-    let qntandprice = quantity*selectedPrice;
+
     console.log(quantity, selectedPrice)
     let formattedPrice = formatCurrency(selectedPrice);
     
-console.log("quantity", typeof(quantity))
+
     priceElement.innerText = formattedPrice;
   });
 
