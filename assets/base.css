@@ -3346,3 +3346,11 @@ details-disclosure > details {
   font-size: 10px;
 }
 
+.customImage{
+  object-fit: cover;
+}
+
+.customList{
+  display:flex;
+  
+}
