@@ -1,19 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-  var selectElement = document.getElementById('SortByColor');
-  var priceElement = document.getElementById('customPrice');
+  let selectElement = document.getElementById('SortByColor');
+  let priceElement = document.getElementById('customPrice');
   
   selectElement.addEventListener('change', function() {
-    var selectedOption = selectElement.options[selectElement.selectedIndex];
-    var selectedPrice = selectedOption.getAttribute('data-variant-price');
-    var formattedPrice = formatCurrency(selectedPrice);
-
+    let selectedOption = selectElement.options[selectElement.selectedIndex];
+    let selectedPrice = selectedOption.getAttribute('data-letiant-price');
+    let quantity = parseInt(quantityInput.value);
+    let formattedPrice = formatCurrency(selectedPrice);
+console.log("quantity", quantity)
     priceElement.innerText = formattedPrice;
   });
 
   function formatCurrency(amount) {
-    var formattedAmount = (parseFloat(amount) / 100).toFixed(2);
+    let formattedAmount = (parseFloat(amount) / 100).toFixed(2);
     return "₴" + formattedAmount + " UAH";
   }
+
+  
 });
 
 
