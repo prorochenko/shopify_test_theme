@@ -20,13 +20,14 @@ console.log("quantity", quantity)
 
   // Обработчик события для увеличения количества
   document.querySelectorAll('.quantity__button[name="plus"]').addEventListener('click', function() {
-   
+    quantityInput.stepUp();
     selectElement.dispatchEvent(new Event('change'));
   });
 
   // Обработчик события для уменьшения количества
   document.querySelectorAll('.quantity__button[name="minus"]').addEventListener('click', function() {
-   selectElement.dispatchEvent(new Event('change'));
+    quantityInput.stepDown();
+    selectElement.dispatchEvent(new Event('change'));
   });
   
 });
