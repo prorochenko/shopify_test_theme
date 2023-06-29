@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let imageSrc = selectedOption.getAttribute('data-variant-image');
     console.log(imageSrc)
     
-document.getElementById('image').src = selectedOption.getAttribute('data-variant-image');
+document.getElementById('image').src = imageSrc;
     
     let qntMultPrc = quantity * selectedPrice;
 
