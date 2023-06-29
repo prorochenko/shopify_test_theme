@@ -19,15 +19,14 @@ console.log("quantity", quantity)
   }
 
   // Обработчик события для увеличения количества
-  document.querySelector('.quantity__button[name="plus"]').addEventListener('click', function() {
-    quantityInput.stepUp();
+  document.querySelectorAll('.quantity__button[name="plus"]').addEventListener('click', function() {
+   
     selectElement.dispatchEvent(new Event('change'));
   });
 
   // Обработчик события для уменьшения количества
-  document.querySelector('.quantity__button[name="minus"]').addEventListener('click', function() {
-    quantityInput.stepDown();
-    selectElement.dispatchEvent(new Event('change'));
+  document.querySelectorAll('.quantity__button[name="minus"]').addEventListener('click', function() {
+   selectElement.dispatchEvent(new Event('change'));
   });
   
 });
