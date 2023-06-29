@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
   let selectElement = document.getElementById('SortByColor');
   let priceElement = document.getElementById('customPrice');
-  
+   let quantityInput = document.getElementById('quantity');
+
   selectElement.addEventListener('change', function() {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
     let selectedPrice = selectedOption.getAttribute('data-letiant-price');
     let quantity = parseInt(quantityInput.value);
     let formattedPrice = formatCurrency(selectedPrice);
+    
 console.log("quantity", quantity)
     priceElement.innerText = formattedPrice;
   });
