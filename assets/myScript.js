@@ -28,7 +28,7 @@ await fetch(window.Shopify.routes.root + 'cart/add.js', {
   headers: {
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify(formData)
+  body: JSON.stringify(addToCartForms)
 
 })
   });
