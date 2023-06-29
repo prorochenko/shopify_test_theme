@@ -11,20 +11,32 @@
   <p class="customDescription">{{ product.description }}</p>
     {% assign customPrice =  product.price %}
   <select class="customSelect" name="Sort_ByColor" id="SortByColor">
-{% for product in product.variants %}
-  {% assign customPrice = product.price  %}
-<option   value="{{ product.title | escape }}"  {% if option.value == Sort_ByColor %}
+{% for prod in product.variants %}
+  {% assign customPrice = prod.price  %}
+<option   value="{{ prod.title | escape }}"  {% if option.value == Sort_ByColor %}
                         selected="selected"
-                      {% endif %}>{{ product.title}}</option>
+                      {% endif %}>{{ prod.title}}</option>
   {% endfor %}
   </select>
 
-  <p>{{ customPrice | money }}</p>
+  <p id="customPrice">{{ customPrice | money }}</p>
   
 </li>
   {%endfor%}
  
 </ul>
 </div>
-
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var selectElement = document.getElementById('SortByColor');
+    var priceElement = document.getElementById('customPrice');
+    
+    selectElement.addEventListener('change', function() {
+      var selectedOption = selectElement.options[selectElement.selectedIndex];
+      var selectedPrice = selectedOption.getAttribute('data-variant-price');
+      
+      priceElement.innerText = selectedPrice;
+    });
+  });
+</script>
   {{ section.settings.collection.products | json }}
