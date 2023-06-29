@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let quantity = parseInt(quantityInput.value);
     let formattedPrice = formatCurrency(selectedPrice);
     
-console.log("quantity", quantity)
+console.log("quantity", typeof(quantity))
     priceElement.innerText = formattedPrice;
   });
 
