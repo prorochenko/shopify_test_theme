@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
     let selectedPrice = selectedOption.getAttribute('data-letiant-price');
     let quantity = parseInt(quantityInput.value);
-    let formattedPrice = quantity*formatCurrency(selectedPrice);
+let qntandprice = quantity*selectedPrice;
+    
+    let formattedPrice = formatCurrency(qntandprice);
     
 console.log("quantity", typeof(quantity))
     priceElement.innerText = formattedPrice;
