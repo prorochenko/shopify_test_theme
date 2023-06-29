@@ -26,7 +26,7 @@ let formData = {
   }]
 };
 
-addToCartForms.forEach((form) => {form.addEventListener("submit", handleSubmit);
+addToCartForms.forEach((form) => {form.addEventListener("submit", handleSubmit)});
 
 async function handleSubmit(event){
   event.preventDefault();
