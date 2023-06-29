@@ -1,7 +1,9 @@
 const addToCart = document.querySelectorAll('form[action="/cart/add"]');
 
-addToCart.forEach(form => {
-  form.addEventListener('Submit',(event)=>{
+addToCartForms.forEach((form) => {
+  form.addEventListener("submit", async (event) => {
+   
     event.preventDefault();
-  })
-})
+  }
+                        )
+)
