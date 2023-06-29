@@ -40,6 +40,10 @@ const  res= await fetch('/cart.json');
 //display that product added to cart
     form.querySelector('.addedToCart').classList.add('active')
     
+const message = document.createElement("p");
+message.classList.add('addedToCart');
+    message.textContent = 'Added to Cart! :)';
+    form.appendChild(message);
     
   })
 });
