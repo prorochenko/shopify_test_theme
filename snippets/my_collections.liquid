@@ -20,7 +20,31 @@
         {% endif %}
 
         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
-        
+        /////
+        {% form 'product', product %}
+          <label class="product-option">Options</label>
+          <select class="product-select" name="id">
+            {% for variant in product.variants %}
+              <option
+                {% if selectedVariant.id == variant.id %}
+                  selected
+                {% endif %}
+                value="{{ variant.id }}"
+              >
+                {{ variant.title }}
+              </option>
+            {% endfor %}
+          </select>
+
+          <div class="product-quantity">
+            <label for="quantity">Quantity</label>
+            <input name="quantity" id="quantity" value="1">
+          </div>
+
+          <button class="button product-add" type="submit">Add to cart</button>
+        {% endform %}
+      
+        ////
         {% form 'product', product %}
 
           
