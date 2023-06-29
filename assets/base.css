@@ -3344,8 +3344,7 @@ details-disclosure > details {
 
 .card__description {
   font-size: 10px;
-  width:300px;
-  overflow: auto;
+
 }
 
 .customImage{
@@ -3363,4 +3362,9 @@ details-disclosure > details {
 }
 .customSelect{
   margin-left: 15px;
+}
+.customDescription{  
+  font-size: 10px;
+  width:300px;
+  overflow: auto;
 }
