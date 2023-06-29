@@ -36,6 +36,5 @@ await fetch(window.Shopify.routes.root + 'cart/add.js', {
   body: new FormData(form),
 
 })
-  });
+  }
   
-}
