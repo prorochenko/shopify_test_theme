@@ -32,7 +32,7 @@ await fetch(window.Shopify.routes.root + 'cart/add.js', {
 const  res= await fetch('/cart.json');
     const cart = await res.json();
 
-    document.querySelectorAll(".cart-count").forEach((el) => {
+    document.querySelectorAll(".cart-count-bubble").forEach((el) => {
       el.textContent = cart.item_count;
     });
 
