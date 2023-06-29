@@ -10,8 +10,15 @@
         {% endif %}
         <h3>{{ product.title }}</h3>
         <p class="customDescription">{{ product.description }}</p>
+
+      {% if product.variants[0].price %}
         
-       {% assign customPrice = product.price %}
+ {% assign customPrice = product.variants[0].price %}
+        {% else %}
+        
+         {% assign customPrice = product.price %}
+        {% endif %}
+
         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
         
         {% form 'product', product %}
