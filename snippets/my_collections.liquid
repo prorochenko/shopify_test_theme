@@ -9,5 +9,12 @@
   <h3>{{ product.title }}</h3>
   <p>{{ product.description }}</p>
   <p>{{ product.price | money }}</p>
+  <select name="Sort_ByColor" id="SortByColor">
+{% for product in product.variants %}
+<option   value="{{ product.title | escape }}"  {% if option.value == Sort_ByColor %}
+                        selected="selected"
+                      {% endif %}>{{ product.title}}</option>
+  {% endfor %}
+  </select>
   {%endfor%} {%endfor%}
 </div>
