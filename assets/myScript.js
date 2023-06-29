@@ -2,17 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
   let selectElement = document.getElementById('SortByColor');
   let priceElement = document.getElementById('customPrice');
 
-
   selectElement.addEventListener('change', function() {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
     let selectedPrice = selectedOption.getAttribute('data-letiant-price');
-
    
-
-
     let formattedPrice = formatCurrency(selectedPrice);
     
-
     priceElement.innerText = formattedPrice;
   });
 
@@ -20,8 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let formattedAmount = (parseFloat(amount) / 100).toFixed(2);
     return "₴" + formattedAmount + " UAH";
   }
-
- 
   
 });
 
@@ -44,7 +37,6 @@ const  res= await fetch('/cart.json');
     document.querySelectorAll(".cart-count-bubble").forEach((el) => {
       el.textContent = cart.item_count;
     });
-
 
 //display that product added to cart
   
