@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
     let selectedPrice = selectedOption.getAttribute('data-variant-price');
     let quantity = quantityInput.value;
-    let imageSrc = image.src;
-    console.log(imageSrc)
+
+    console.log(image)
     let qntMultPrc = quantity * selectedPrice;
 
     let formattedPrice = formatCurrency(qntMultPrc);
