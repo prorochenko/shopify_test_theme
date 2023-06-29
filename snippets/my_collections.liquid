@@ -26,9 +26,7 @@
           <select class="product-select" name="id">
             {% for variant in product.variants %}
               <option
-                {% if selectedVariant.id == variant.id %}
-                  selected
-                {% endif %}
+               
                 value="{{ variant.id }}"
               >
                 {{ variant.title }}
