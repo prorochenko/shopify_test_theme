@@ -160,9 +160,6 @@ assign show_desktop_slider = true endif -%}
   </div>
 </div>
 
-{% render "my_collections"%}
-{{ hello }}
-
 {% schema %} { "name": "t:sections.featured-collection.name", "tag": "section", "class": "section",
 "disabled_on": { "groups": ["header", "footer"] }, "settings": [ { "type": "inline_richtext", "id":
 "title", "default": "Featured collection", "label":
