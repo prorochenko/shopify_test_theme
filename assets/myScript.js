@@ -18,6 +18,17 @@ console.log("quantity", quantity)
     return "₴" + formattedAmount + " UAH";
   }
 
+  // Обработчик события для увеличения количества
+  document.querySelector('.quantity__button[name="plus"]').addEventListener('click', function() {
+    quantityInput.stepUp();
+    selectElement.dispatchEvent(new Event('change'));
+  });
+
+  // Обработчик события для уменьшения количества
+  document.querySelector('.quantity__button[name="minus"]').addEventListener('click', function() {
+    quantityInput.stepDown();
+    selectElement.dispatchEvent(new Event('change'));
+  });
   
 });
 
