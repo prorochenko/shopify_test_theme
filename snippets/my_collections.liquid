@@ -6,12 +6,12 @@
     {% for product in section.settings.collection.products %}
       <li class="customItem">
        
-      {% if product.variants[0].price %}
-         {% assign customPrice = product.variants[0].featured_image %}
+      {% if product.variants[0].featured_image.src %}
+         {% assign customSrc = product.variants[0].featured_image.src %}
         {% else %}
-      {% assign customPrice = product.price %}
+      {% assign customSrc = product | image_url  %}
         {% endif %}
-                  <img class="customImage" width="300" height="300" src="{{ product | image_url }}" id="image" alt="product"/>
+                  <img class="customImage" width="300" height="300" src="{{ customSrc | image_url }}" id="image" alt="product"/>
                 <h3>{{ product.title }}</h3>
         <p class="customDescription">{{ product.description }}</p>
 
