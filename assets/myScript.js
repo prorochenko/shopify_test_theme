@@ -25,9 +25,9 @@ addToCartForms.forEach((form) => {
 
     event.preventDefault();
 
-    await fetch('cart/add.js', {
-  method: 'POST',
-  body: formData
-})
+//     await fetch('cart/add.js', {
+//   method: 'POST',
+//   body: formData
+// })
   });
 });
