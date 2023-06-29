@@ -38,7 +38,7 @@
       <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1">
       <button class="quantity__button no-js-hidden" name="plus" type="button">
         <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
-        {% render 'icon-plus' %}
+        {% render 'icon-plus' %} {% render 'icon-plus' %}
       </button>
     </quantity-input>
 <!--     <input type="submit" value="Add to cart" class="button" style="margin-top: 17px" /> -->
