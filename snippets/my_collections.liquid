@@ -22,7 +22,7 @@
         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
 <!--        some -->
         {% form 'product', product %}
-          <label class="product-option">Options</label>
+   <div class="customOptions"> <label class="product-option">Options</label>
           <select class="product-select" name="id" id="SortByColor">
             {% for variant in product.variants %}
               <option data-variant-price="{{ variant.price }}"
@@ -33,7 +33,7 @@
             {% endfor %}
           </select>
 
-          <div style="display: flex">
+          <div>
     <quantity-input class="quantity" style="width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2); margin-top: 17px; margin-right: 10px;" >
       <button class="quantity__button no-js-hidden" name="minus" type="button">
         <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
@@ -45,7 +45,7 @@
         {% render 'icon-plus' %} 
       </button>
     </quantity-input>
-<!--     <input type="submit" value="Add to cart" class="button" style="margin-top: 17px" /> -->
+            </div>
   </div>
 <div class="customButton">
           <button class="button customButton product-add" type="submit">Add to cart</button>
