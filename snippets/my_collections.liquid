@@ -35,7 +35,7 @@
   });
 
   function formatCurrency(amount) {
-    var formattedAmount = parseint(amount).toFixed(2);
+    var formattedAmount = parseFloat(amount).toFixed(2)/100;
     return "₴" + formattedAmount;
   }
 });
