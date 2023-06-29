@@ -17,6 +17,19 @@ document.addEventListener('DOMContentLoaded', function() {
     let formattedAmount = (parseFloat(amount) / 100).toFixed(2);
     return "₴" + formattedAmount + " UAH";
   }
+
+  document.querySelectorAll('.quantity__button[name="plus"]').forEach((button) => {
+  button.addEventListener('click', function() {
+    selectElement.dispatchEvent(new Event('change'));
+  });
+});
+
+// Обработчик события для уменьшения количества
+document.querySelectorAll('.quantity__button[name="minus"]').forEach((button) => {
+  button.addEventListener('click', function() {
+    selectElement.dispatchEvent(new Event('change'));
+  });
+});
   
 });
 
