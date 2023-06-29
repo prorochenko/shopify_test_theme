@@ -10,7 +10,7 @@
         {% endif %}
         <h3>{{ product.title }}</h3>
         <p class="customDescription">{{ product.description }}</p>
-{{ product.variants}}
+{{ product.variants | json}}
       {% if product.variants[0].price %}
         
  {% assign customPrice = product.variants[0].price %}
