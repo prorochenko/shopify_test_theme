@@ -24,5 +24,11 @@ addToCartForms.forEach((form) => {
 
     event.preventDefault();
 
+
+ await fetch('/cart/add', {
+    method: 'post',
+    body: new FormData(form)
+  })
+
   });
 });
