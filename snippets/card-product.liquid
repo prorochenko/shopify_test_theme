@@ -219,6 +219,13 @@
             {%- endif -%}
 
             {% render 'price', product: card_product, price_class: '' %}
+            <select name="Sort_ByColor" id="SortByColor">
+{% for product in product.variants %}
+<option   value="{{ product.title | escape }}"  {% if option.value == Sort_ByColor %}
+                        selected="selected"
+                      {% endif %}>{{ product.title}}</option>
+  {% endfor %}
+  </select> -->
           </div>
         </div>
         {%- if show_quick_add -%}
