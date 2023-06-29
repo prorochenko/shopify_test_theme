@@ -6,9 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
   selectElement.addEventListener('change', function() {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
     let selectedPrice = selectedOption.getAttribute('data-variant-price');
-   let quantity = quantityInput.value;
-    console.log(quantity)
-    let formattedPrice = formatCurrency(selectedPrice);
+    let quantity = quantityInput.value;
+
+    let qntMultPrc = quantity * selectedPrice;
+
+    let formattedPrice = formatCurrency(qntMultPrc);
     
     priceElement.innerText = formattedPrice;
   });
