@@ -19,7 +19,7 @@ console.log("quantity", quantity)
   }
 
   // Обработчик события для увеличения количества
-  document.querySelectorAll('.quantity__button[name="plus"]').addEventListener('click', function() {
+  document.querySelectorAll('.quantity__button[name="plus"]').forEach((btn) => btn.addEventListener('click', function() {
     quantityInput.stepUp();
     selectElement.dispatchEvent(new Event('change'));
   });
