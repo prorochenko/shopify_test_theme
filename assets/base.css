@@ -3354,4 +3354,5 @@ details-disclosure > details {
   display:flex;
   flex-wrap: wrap;
   list-style-type: none;
+  gap: 30px;
 }
