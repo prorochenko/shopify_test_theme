@@ -29,7 +29,7 @@
     selectElement.addEventListener('change', function() {
       var selectedOption = selectElement.options[selectElement.selectedIndex];
       var selectedPrice = selectedOption.getAttribute('data-variant-price');
-          var formattedPrice = "{{ selectedPrice | money_with_currency: 'UAH' }}");
+          var formattedPrice = "{{ selectedPrice | money_with_currency: 'UAH' }}".replace("{{ customPrice }}", selectedPrice);
 
       priceElement.innerText = formattedPrice;
     });
