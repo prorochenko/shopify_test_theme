@@ -22,12 +22,12 @@
         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
 <!--        some -->
         {% form 'product', product %}
-   <div class="customOptions"> <label class="product-option">Options</label>
-          <select class="product-select" name="id" id="SortByColor">
+   <div class="customOptions"> 
+          <label class="product-option">Options</label>
+          <select class="customSelect" name="id" id="SortByColor">
             {% for variant in product.variants %}
-              <option 
-               value="{{ variant.id }}" data-variant-price="{{ variant.price }}"
-              >
+              {{ variant|json }}
+              <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}">
                 {{ variant.title }}
               </option>
             {% endfor %}
