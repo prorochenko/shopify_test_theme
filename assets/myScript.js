@@ -26,14 +26,16 @@ let formData = {
   }]
 };
 
-addToCartForms.forEach((form) => form.addEventListener("submit", handleSubmit));
-
-async function handleSubmit(event){
+addToCartForms.forEach((form) => {
+  form.addEventListener("submit", async function handleSubmit(event){
   event.preventDefault();
 await fetch(window.Shopify.routes.root + 'cart/add.js', {
   method: 'POST',
   body: new FormData(form),
 
 })
-  }
+  })
+});
+
+
   
