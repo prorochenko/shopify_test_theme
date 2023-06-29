@@ -26,7 +26,7 @@
         <select class="customSelect" name="id" id="SortByColor">
            
             {% for variant in product.variants %}
-              <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}" data-variant-image="{{ variant.featured_image }}">
+              <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}" data-variant-image="{{ variant.featured_image | img_url: 'master' }}">
                 {{ variant.title }}
               </option>
             {% endfor %}
