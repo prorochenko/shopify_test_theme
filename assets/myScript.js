@@ -37,7 +37,9 @@ const  res= await fetch('/cart.json');
     });
 
 
-
+//display that product added to cart
+    form.querySelector('.addedToCart').classList.add('active')
+    
     
   })
 });
