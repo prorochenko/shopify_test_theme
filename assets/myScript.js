@@ -29,6 +29,7 @@ addToCartForms.forEach((form) => {
   form.addEventListener("submit", async (event) => {
 
     event.preventDefault();
+    console.log(form)
 await fetch(window.Shopify.routes.root + 'cart/add.js', {
   method: 'POST',
   headers: {
