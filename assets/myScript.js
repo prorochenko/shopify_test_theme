@@ -27,6 +27,10 @@ addToCartForms.forEach((form) => {
     await fetch("/cart/add", {
       method: "post",
       body: new FormData(form),
+      headers: {
+      'Content-Type': 'application/json',
+      'X-Requested-With':'xmlhttprequest' /* XMLHttpRequest is ok too, it's case insensitive */
+    },
     });
 
   });
