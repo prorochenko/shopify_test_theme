@@ -10,14 +10,21 @@
       
       {% form 'product', product %}
         {% assign customPrice = product.price %}
+         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
         
         <select class="customSelect" name="Sort_ByColor" id="SortByColor">
           {% for variant in product.variants %}
             <option value="{{ variant.title | escape }}" data-variant-price="{{ variant.price }}">{{ variant.title }}</option>
           {% endfor %}
         </select>
+   
+
+        <div class="product-quantity">
+            <label for="quantity">Quantity</label>
+            <input name="quantity" id="quantity" value="1">
+          </div>
+
         
-        <p id="customPrice">{{ customPrice | money_with_currency }}</p>
        <button class="customButton product-add" type="submit">Add to cart</button>
      {% endform %}
       </li>
