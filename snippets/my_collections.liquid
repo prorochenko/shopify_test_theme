@@ -5,6 +5,12 @@
   <ul class="customList">
     {% for product in section.settings.collection.products %}
       <li class="customItem">
+       
+      {% if product.variants[0].price %}
+         {% assign customPrice = product.variants[0].featured_image %}
+        {% else %}
+      {% assign customPrice = product.price %}
+        {% endif %}
                   <img class="customImage" width="300" height="300" src="{{ product | image_url }}" id="image" alt="product"/>
                 <h3>{{ product.title }}</h3>
         <p class="customDescription">{{ product.description }}</p>
@@ -26,7 +32,7 @@
         <select class="customSelect" name="id" id="SortByColor">
            
             {% for variant in product.variants %}
-              <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}" data-variant-image="https:{{ variant.featured_image | img_url: 'master' }}">
+              <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}" data-variant-image="https:{{ variant.featured_image.src | img_url: 'master' }}">
                 {{ variant.title }}
               </option>
             {% endfor %}
