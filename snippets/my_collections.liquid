@@ -25,7 +25,7 @@
           <label class="product-option">Options</label>
           <select class="product-select" name="id" id="SortByColor">
             {% for variant in product.variants %}
-              <option
+              <option data-variant-price="{{ variant.price }}"
                value="{{ variant.id }}"
               >
                 {{ variant.title }}
