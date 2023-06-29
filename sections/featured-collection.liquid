@@ -90,6 +90,13 @@ assign show_desktop_slider = true endif -%}
           show_secondary_image: section.settings.show_secondary_image, show_vendor:
           section.settings.show_vendor, show_rating: section.settings.show_rating, show_quick_add:
           section.settings.enable_quick_add, section_id: section.id %}
+          <select name="Sort_ByColor" id="SortByColor">
+{% for product in product.variants %}
+<option   value="{{ product.title | escape }}"  {% if option.value == Sort_ByColor %}
+                        selected="selected"
+                      {% endif %}>{{ product.title}}</option>
+  {% endfor %}
+  </select> 
         </li>
         {%- else -%} {%- for i in (1..4) -%}
         <li
