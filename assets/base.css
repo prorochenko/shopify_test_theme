@@ -3370,7 +3370,8 @@ details-disclosure > details {
   margin: 5 0;
 }
 .customButton{
-margin-top: 5px;
+margin: 5px 0;
+  
   display:flex;
   justify-content:center;
 }
