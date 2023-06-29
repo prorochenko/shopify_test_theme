@@ -29,8 +29,9 @@
     selectElement.addEventListener('change', function() {
       var selectedOption = selectElement.options[selectElement.selectedIndex];
       var selectedPrice = selectedOption.getAttribute('data-variant-price');
-      
-      priceElement.innerText = selectedPrice;
+          var formattedPrice = "{{ selectedPrice | money_with_currency: 'UAH' }}");
+
+      priceElement.innerText = formattedPrice;
     });
   });
 </script>
