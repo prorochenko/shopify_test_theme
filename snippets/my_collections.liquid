@@ -1,5 +1,5 @@
 <div class="customCollection">
-  {{ collections | json }}
+  {{ section.settings.collection.products | json }}
   {%for collection in collections %}
   <h2>{{ collection.title }}</h2>
   {%unless collection.description == blank%}
