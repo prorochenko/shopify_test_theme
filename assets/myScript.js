@@ -1,3 +1,5 @@
+let quantity = 1;
+
 document.addEventListener('DOMContentLoaded', function() {
   let selectElement = document.getElementById('SortByColor');
   let priceElement = document.getElementById('customPrice');
@@ -7,7 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
     let selectedPrice = selectedOption.getAttribute('data-letiant-price');
     let quantity = parseInt(quantityInput.value);
-let qntandprice = quantity*selectedPrice;
+   
+    let qntandprice = quantity*selectedPrice;
     
     let formattedPrice = formatCurrency(qntandprice);
     
