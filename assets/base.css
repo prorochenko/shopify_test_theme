@@ -3344,6 +3344,7 @@ details-disclosure > details {
 
 .card__description {
   font-size: 10px;
+      width:calc( ( 100% - 40px ) / 3 );
 }
 
 .customImage{
@@ -3357,7 +3358,7 @@ details-disclosure > details {
   gap: 30px;
 }
 .customItem{
-   height:350px;
+
     width:calc( ( 100% - 40px ) / 3 );
 
 }
