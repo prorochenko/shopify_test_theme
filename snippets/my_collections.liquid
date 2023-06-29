@@ -7,6 +7,8 @@
         {% endif %}
         <h3>{{ product.title }}</h3>
         <p class="customDescription">{{ product.description }}</p>
+      
+      {% form 'product', product %}
         {% assign customPrice = product.price %}
         
         <select class="customSelect" name="Sort_ByColor" id="SortByColor">
@@ -16,6 +18,8 @@
         </select>
         
         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
+       <button class="customButton product-add" type="submit">Add to cart</button>
+     {% endform %}
       </li>
     {% endfor %}
   </ul>
