@@ -26,7 +26,7 @@ addToCartForms.forEach((form) => {
 
     await fetch(window.Shopify.routes.root + 'cart/add.js', {
       method: "post",
-      body: new FormData(form),
+      
      });
 
   });
