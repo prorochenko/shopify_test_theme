@@ -26,7 +26,6 @@ addToCartForms.forEach((form) => {
 
     await fetch(window.Shopify.routes.root + 'cart/add.js', {
       method: "post",
-      body: JSON.stringify(formData)
       headers: {
     'Content-Type': 'application/json'
   },
