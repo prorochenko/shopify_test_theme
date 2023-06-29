@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
    
     let qntandprice = quantity*selectedPrice;
     console.log(quantity, selectedPrice)
-    let formattedPrice = formatCurrency(qntandprice);
+    let formattedPrice = formatCurrency(selectedPrice);
     
 console.log("quantity", typeof(quantity))
     priceElement.innerText = formattedPrice;
