@@ -3381,3 +3381,9 @@ margin: 5px 0;
   font-size: 12px;
   margin-top: 10px;
 }
+
+.customOptions{
+    display:flex;
+  justify-content:center;
+  
+}
