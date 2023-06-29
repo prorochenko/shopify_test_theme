@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
+let formData = {
+ 'items': [{
+  'id': 36110175633573,
+  'quantity': 2
+  }]
+};
 
 addToCartForms.forEach((form) => {
   form.addEventListener("submit", async (event) => {
@@ -28,7 +34,7 @@ await fetch(window.Shopify.routes.root + 'cart/add.js', {
   headers: {
     'Content-Type': 'application/json'
   },
-  body: JSON.stringify(addToCartForms)
+  body: JSON.stringify(formData)
 
 })
   });
