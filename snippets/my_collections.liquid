@@ -1,30 +1,26 @@
-
-
 <div class="customCollection">
-<ul class="customList">
-{%for product in section.settings.collection.products %}
-<li class="customItem">
-  {% if product.featured_image%}
-    <img class="customImage" width="300" height="300" src="{{ product | image_url }}" alt="product"/>
-  {% endif %}
-  <h3>{{ product.title }}</h3>
-  <p class="customDescription">{{ product.description }}</p>
-    {% assign customPrice =  product.price %}
-  <select class="customSelect" name="Sort_ByColor" id="SortByColor">
-{% for prod in product.variants %}
-  {% assign customPrice = prod.price  %}
-<option   value="{{ prod.title | escape }}"  {% if option.value == Sort_ByColor %}
-                        selected="selected"
-                      {% endif %}>{{ prod.title}}</option>
-  {% endfor %}
-  </select>
-
-  <p id="customPrice">{{ customPrice | money }}</p>
-  
-</li>
-  {%endfor%}
- 
-</ul>
+  <ul class="customList">
+    {% for product in section.settings.collection.products %}
+      <li class="customItem">
+        {% if product.featured_image %}
+          <img class="customImage" width="300" height="300" src="{{ product | image_url }}" alt="product"/>
+        {% endif %}
+        <h3>{{ product.title }}</h3>
+        <p class="customDescription">{{ product.description }}</p>
+        {% assign customPrice = product.price %}
+        
+        <select class="customSelect" name="Sort_ByColor" id="SortByColor" data-product-price="{{ customPrice }}">
+          {% for variant in product.variants %}
+            <option value="{{ variant.title | escape }}" {% if option.value == Sort_ByColor %}
+              selected="selected"
+            {% endif %}>{{ variant.title }}</option>
+          {% endfor %}
+        </select>
+        
+        <p id="customPrice">{{ customPrice | money }}</p>
+      </li>
+    {% endfor %}
+  </ul>
 </div>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
