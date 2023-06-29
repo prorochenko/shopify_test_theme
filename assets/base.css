@@ -3356,3 +3356,8 @@ details-disclosure > details {
   list-style-type: none;
   gap: 30px;
 }
+.customItem{
+   height:350px;
+    width:calc( ( 100% - 40px ) / 3 );
+
+}
