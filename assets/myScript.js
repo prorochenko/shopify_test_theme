@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
     let selectedPrice = selectedOption.getAttribute('data-variant-price');
     let quantity = quantityInput.value;
-    let imageSrc = JSON.stringify(selectedOption.getAttribute('data-variant-image'));
+    let imageSrc = selectedOption.getAttribute('data-variant-image');
     console.log(imageSrc)
     
 document.getElementById('image').src = imageSrc;
