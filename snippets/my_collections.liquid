@@ -9,7 +9,7 @@
   {% endif %}
   <h3>{{ product.title }}</h3>
   <p class="customDescription">{{ product.description }}</p>
-  <p>{{ product.price | money }}</p>
+  <p>{{ product.variants.price | money }}</p>
   <select class="customSelect" name="Sort_ByColor" id="SortByColor">
 {% for product in product.variants %}
 <option   value="{{ product.title | escape }}"  {% if option.value == Sort_ByColor %}
