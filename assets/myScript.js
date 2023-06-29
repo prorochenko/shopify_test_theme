@@ -7,14 +7,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
     let selectedPrice = selectedOption.getAttribute('data-letiant-price');
     let quantity = parseInt(quantityInput.value);
-    let formattedPrice = formatCurrency(selectedPrice);
+    let formattedPrice = quantity*formatCurrency(selectedPrice);
     
 console.log("quantity", typeof(quantity))
     priceElement.innerText = formattedPrice;
   });
 
   function formatCurrency(amount) {
-    let formattedAmount = (parseFloat(amount) * quantity / 100).toFixed(2);
+    let formattedAmount = (parseFloat(amount) / 100).toFixed(2);
     return "₴" + formattedAmount + " UAH";
   }
 
