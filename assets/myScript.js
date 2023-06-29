@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   selectElement.addEventListener('change', function() {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
-    let selectedPrice = selectedOption.getAttribute('data-letiant-price');
+    let selectedPrice = selectedOption.getAttribute('data-variant-price');
    
     let formattedPrice = formatCurrency(selectedPrice);
     
