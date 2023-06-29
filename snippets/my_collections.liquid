@@ -18,7 +18,7 @@
         {% endif %}
 
         <p id="customPrice">{{ customPrice | money_with_currency }}</p>
-         {{ product.variants[0].featured_image.src }}
+         {{ product.variants[0].featured_image| json }}
 <!--        some -->
         {% form 'product', product %}
    <div class="customOptions"> 
