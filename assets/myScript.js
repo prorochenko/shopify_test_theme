@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
 const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
 
 addToCartForms.forEach((form) => {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
 
     event.preventDefault();
-fetch(window.Shopify.routes.root + 'cart/add.js', {
+await fetch(window.Shopify.routes.root + 'cart/add.js', {
   method: 'POST',
   body: new FormData(addToCartForm)
 })
