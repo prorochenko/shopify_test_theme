@@ -14,7 +14,7 @@ console.log("quantity", quantity)
   });
 
   function formatCurrency(amount) {
-    let formattedAmount = (parseFloat(amount) / 100).toFixed(2);
+    let formattedAmount = (parseFloat(amount) * quantity / 100).toFixed(2);
     return "₴" + formattedAmount + " UAH";
   }
 
