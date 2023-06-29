@@ -3385,5 +3385,6 @@ margin: 5px 0;
 .customOptions{
     display:flex;
   justify-content:center;
+  gap:5px;
   
 }
