@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedPrice = selectedOption.getAttribute('data-variant-price');
     let quantity = quantityInput.value;
 
-    console.log(image)
+    console.log(image.src)
     let qntMultPrc = quantity * selectedPrice;
 
     let formattedPrice = formatCurrency(qntMultPrc);
