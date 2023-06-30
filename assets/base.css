@@ -3362,6 +3362,7 @@ details-disclosure > details {
 
 .card__price{
 margin: 10px 0 0 0;
+    font-size: 14px;
 }
 
 .card__quantity{
@@ -3380,12 +3381,6 @@ margin: 10px 0 0 0;
     width:300px;
 }
 
-.card__description{  
-  font-size: 14px;
-  width:300px;
-  overflow: auto;
-  margin: 10px 0 0 0;
-}
 
 .card__select{
   width: 300px;
