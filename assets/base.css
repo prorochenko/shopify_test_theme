@@ -3384,6 +3384,7 @@ details-disclosure > details {
   height: 50px;
    box-sizing: border-box;
   border: 1px solid #000;
+    padding-left: 10px;
 }
 
 .customButton{ 
