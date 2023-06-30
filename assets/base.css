@@ -3390,3 +3390,8 @@ margin: 5px 0;
   gap:10px;
   align-items:center;
 }
+
+.card__title{
+    font-size: 16px;
+  font-weight: bold;
+}
