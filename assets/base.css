@@ -3363,6 +3363,7 @@ details-disclosure > details {
 .card__price{
    margin: 10px 0 0 0;
    font-size: 16px;
+  color: black;
 }
 
 
@@ -3405,10 +3406,6 @@ details-disclosure > details {
     transform: translateY(-1px);
     box-shadow: 0px 2px 10px 1px #f28a49;
   }
-}
-
-.customButton:hover{
-  
 }
 
 .card__quantity{
