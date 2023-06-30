@@ -31,7 +31,7 @@ document.getElementById('image').src = imageSrc;
   });
 });
 
-// Обработчик события для уменьшения количества
+// Обробник події зменшення кількості
 document.querySelectorAll('.quantity__button[name="minus"]').forEach((button) => {
   button.addEventListener('click', function() {
     selectElement.dispatchEvent(new Event('change'));
