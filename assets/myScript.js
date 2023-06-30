@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedPrice = selectedOption.getAttribute('data-variant-price');
     let quantity = quantityInput.value;
     let imageSrc = selectedOption.getAttribute('data-variant-image');
-    console.log(imageSrc)
+
     
 document.getElementById('image').src = imageSrc;
     
