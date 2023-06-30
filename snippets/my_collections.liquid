@@ -24,10 +24,8 @@
 <!-- FORM -->
         
     {% form 'product', product %}
-      <div class="customOptions"> 
           <label class="product-option" for="SortByColor"></label>
-            
-          <select class="customSelect" name="id" id="SortByColor">
+           <select class="customSelect" name="id" id="SortByColor">
             {% for variant in product.variants %}
               <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}" data-variant-image="https:{{ variant.featured_image.src | img_url: 'master' }}">
                 {{ variant.title }}
@@ -48,7 +46,7 @@
         </button>
         </quantity-input>
      </div>
-   </div>
+
         
      <div class="customButton">
           <button class="button customButton product-add" type="submit">Add to cart</button>
