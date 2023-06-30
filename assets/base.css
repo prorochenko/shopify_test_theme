@@ -3395,6 +3395,11 @@ details-disclosure > details {
   height: 50px;
 }
 
+.card__quantityAndButton{
+  display:flex;
+  gap: 20px;
+}
+
 .addedToCart {
   text-align: center;
   font-size: 12px;
