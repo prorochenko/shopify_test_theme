@@ -13,7 +13,7 @@
         {% endif %}
                   <img class="card__image" width="300" height="300" src="{{ customSrc | image_url }}" id="image" alt="product"/>
                 <h3 class="card__title">{{ product.title }}</h3>
-        <p class="customDescription">{{ product.description }}</p>
+        <p class="card__description">{{ product.description }}</p>
 
       {% if product.variants[0].price %}
         

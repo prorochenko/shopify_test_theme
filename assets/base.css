@@ -3371,7 +3371,7 @@ details-disclosure > details {
 .customSelect{
   margin-left: 15px;
 }
-.customDescription{  
+.card__description{  
   font-size: 10px;
   width:300px;
   overflow: auto;
