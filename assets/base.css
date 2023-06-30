@@ -3384,11 +3384,12 @@ details-disclosure > details {
   height: 20px;
 }
 
-.customButton{
-margin: 5px 0;
+.customButton{ 
+  margin: 5px 0;
   background-color:#da554c;
   display:flex;
   justify-content:center;
+  border: none;
 }
 
 .addedToCart {
