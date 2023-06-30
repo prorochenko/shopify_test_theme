@@ -3390,6 +3390,7 @@ details-disclosure > details {
   display:flex;
   justify-content:center;
   border: none;
+  width:100%;
 }
 
 .addedToCart {
