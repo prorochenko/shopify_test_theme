@@ -25,7 +25,7 @@
         
     {% form 'product', product %}
       <label class="product-option" for="SortByColor"></label>
-           <select class="customSelect" name="id" id="SortByColor">
+           <select class="card__select customSelect " name="id" id="SortByColor">
             {% for variant in product.variants %}
               <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}" data-variant-image="https:{{ variant.featured_image.src | img_url: 'master' }}">
                 {{ variant.title }}
