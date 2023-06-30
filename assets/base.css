@@ -3391,6 +3391,7 @@ details-disclosure > details {
   justify-content:center;
   border: none;
   width:100%;
+  height: 30px;
 }
 
 .addedToCart {
