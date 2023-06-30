@@ -3394,7 +3394,7 @@ details-disclosure > details {
   content: "";
   position: absolute;
   top: 50%;
-  right: 10px; /* Смещение от правого края */
+  right: 20px; 
   transform: translate(0, -50%) rotate(45deg);
   border: solid #000;
   border-width: 0 2px 2px 0;
