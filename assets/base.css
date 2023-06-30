@@ -3344,6 +3344,7 @@ details-disclosure > details {
 
 .card__description {
   font-size: 10px;
+  margin: 10px 0;
 
 }
 
