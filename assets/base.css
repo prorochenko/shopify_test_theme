@@ -3359,6 +3359,10 @@ details-disclosure > details {
   margin: 10px 0 0 0;
 }
 
+.card__price{
+margin: 10px 0 0 0;
+}
+
 .customList{
   display:flex;
   flex-wrap: wrap;
