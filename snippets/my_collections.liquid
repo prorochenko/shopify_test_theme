@@ -1,107 +1,63 @@
   <script src="{{ 'myScript.js' | asset_url }}" defer></script>
-  
-  
+    
   <div class="customCollection">
   <ul class="customList">
     {% for product in section.settings.collection.products %}
       <li class="card__list">
-       
-      {% if product.variants[0].featured_image.src %}
-         {% assign customSrc = product.variants[0].featured_image.src %}
-        {% else %}
-      {% assign customSrc = product | image_url  %}
-        {% endif %}
-                  <img class="card__image" width="300" height="300" src="{{ customSrc | image_url }}" id="image" alt="product"/>
-                <h3 class="card__title">{{ product.title }}</h3>
-        <p class="card__description">{{ product.description }}</p>
+         {% if product.variants[0].featured_image.src %}
+            {% assign customSrc = product.variants[0].featured_image.src %}
+         {% else %}
+            {% assign customSrc = product | image_url  %}
+         {% endif %}
+          <img class="card__image" width="300" height="300" src="{{ customSrc | image_url }}" id="image" alt="product"/>
+          <h3 class="card__title">{{ product.title }}</h3>
+          <p class="card__description">{{ product.description }}</p>
 
-      {% if product.variants[0].price %}
-        
- {% assign customPrice = product.variants[0].price %}
-        {% else %}
-        
-         {% assign customPrice = product.price %}
-        {% endif %}
+           {% if product.variants[0].price %}
+             {% assign customPrice = product.variants[0].price %}
+           {% else %}
+             {% assign customPrice = product.price %}
+           {% endif %}
 
-        <p id="customPrice">{{ customPrice | money_with_currency }}</p>
-    
-<!--        some -->
-        {% form 'product', product %}
-   <div class="customOptions"> 
+          <p id="customPrice">{{ customPrice | money_with_currency }}</p>
+        
+<!-- FORM -->
+        
+    {% form 'product', product %}
+      <div class="customOptions"> 
           <label class="product-option" for="SortByColor"></label>
-        <select class="customSelect" name="id" id="SortByColor">
-           
+            
+          <select class="customSelect" name="id" id="SortByColor">
             {% for variant in product.variants %}
               <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}" data-variant-image="https:{{ variant.featured_image.src | img_url: 'master' }}">
                 {{ variant.title }}
               </option>
             {% endfor %}
          </select>
-
-          <div>
-    <quantity-input class="quantity" style="width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2); margin-top:0;" >
-      <button class="quantity__button no-js-hidden" name="minus" type="button">
-        <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
-        {% render 'icon-minus' %}
-      </button>
-      <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1" step="1">
-      <button class="quantity__button no-js-hidden" name="plus" type="button">
+            
+      <div>
+         <quantity-input class="quantity" style="width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2); margin-top:0;" >
+         <button class="quantity__button no-js-hidden" name="minus" type="button">
+         <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
+          {% render 'icon-minus' %}
+        </button>
+             <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1" step="1">
+        <button class="quantity__button no-js-hidden" name="plus" type="button">
         <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
-        {% render 'icon-plus' %} 
-      </button>
-    </quantity-input>
-            </div>
-  </div>
-<div class="customButton">
-          <button class="button customButton product-add" type="submit">Add to cart</button>
-</div>
-    
-          
-        {% endform %}
-      
-<!--        some -->
-      
-<!--         {% form 'product', product %}
-
-          
-                <select class="customSelect" name="color" id="SortByColor">
-          {% for variant in product.variants %}
-            <option value="{{ variant.id }}" data-variant-price="{{ variant.price }}">{{ variant.title }}</option>
-          {% endfor %}
-        </select>
-   
-<div style="display: flex">
-    <quantity-input class="quantity" style="width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2); margin-top: 17px; margin-right: 10px;" >
-      <button class="quantity__button no-js-hidden" name="minus" type="button">
-        <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
-        {% render 'icon-minus' %}
-      </button>
-      <input class="quantity__input" type="number" name="quantity" id="quantity" min="1" value="1">
-      <button class="quantity__button no-js-hidden" name="plus" type="button">
-        <span class="visually-hidden">{{ 'products.product.quantity.increase' | t: product: product.title | escape }}</span>
-        {% render 'icon-plus' %} 
-      </button>
-    </quantity-input>
-<input type="submit" value="Add to cart" class="button" style="margin-top: 17px" /> 
-  </div>
-       
-     <div class="product-quantity">
-            <label for="quantity">Quantity</label>
-            <input name="quantity" id="quantity" value="1">
-          </div> 
-
+         {% render 'icon-plus' %} 
+        </button>
+        </quantity-input>
+     </div>
+   </div>
         
-       <button class="button product-add" type="submit">Add to cart</button>
-     {% endform %} -->
-<!--       <form method="post" action="/cart/add">
-  <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
-
-  <input min="1" type="number" id="quantity" name="quantity" value="1"/>
-
-  <input type="submit" value="Add to cart" class="btn" />
-
-</form> -->
-      </li>
-    {% endfor %}
+     <div class="customButton">
+          <button class="button customButton product-add" type="submit">Add to cart</button>
+     </div>
+ {% endform %}
+      
+    <!-- END FORM -->
+        
+     </li>
+       {% endfor %}
   </ul>
 </div>
