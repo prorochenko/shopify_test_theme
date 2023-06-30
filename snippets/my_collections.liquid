@@ -11,7 +11,7 @@
         {% else %}
       {% assign customSrc = product | image_url  %}
         {% endif %}
-                  <img class="customImage" width="300" height="300" src="{{ customSrc | image_url }}" id="image" alt="product"/>
+                  <img class="card__image" width="300" height="300" src="{{ customSrc | image_url }}" id="image" alt="product"/>
                 <h3 class="card__title">{{ product.title }}</h3>
         <p class="customDescription">{{ product.description }}</p>
 
