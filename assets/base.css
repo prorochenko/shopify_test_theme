@@ -3365,10 +3365,7 @@ details-disclosure > details {
    font-size: 16px;
 }
 
-.card__quantity{
-  width:120px;
-  
-}
+
 
 .customList{
   display:flex;
@@ -3403,8 +3400,13 @@ details-disclosure > details {
   padding:0;
 }
 
+.card__quantity{
+  width:120px;
+}
+
 .card__quantityAndButton{
   display:flex;
+  gap: 15px;
   margin: 10px 0 0 0;
   height: 50px
 }
