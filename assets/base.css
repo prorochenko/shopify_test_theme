@@ -3346,7 +3346,7 @@ details-disclosure > details {
   font-size: 10px;
   margin: 10px 0;
   height: 51px;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .card__image{
