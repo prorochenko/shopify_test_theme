@@ -3364,6 +3364,11 @@ details-disclosure > details {
 margin: 10px 0 0 0;
 }
 
+.card__quantity{
+  width:40px;
+  
+}
+
 .customList{
   display:flex;
   flex-wrap: wrap;
