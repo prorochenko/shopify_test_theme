@@ -3385,7 +3385,7 @@ details-disclosure > details {
 
 .customButton{
 margin: 5px 0;
-  
+  background-color:#da554c;
   display:flex;
   justify-content:center;
 }
