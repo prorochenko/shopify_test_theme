@@ -3359,11 +3359,11 @@ details-disclosure > details {
   margin: 10px 0;
 }
 
-.customList{
+.card__list{
   display:flex;
   flex-wrap: wrap;
   list-style-type: none;
-  gap: 30px;
+ 
 }
 .customItem{
     width:300px;

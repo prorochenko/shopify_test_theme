@@ -4,7 +4,7 @@
   <div class="customCollection">
   <ul class="customList">
     {% for product in section.settings.collection.products %}
-      <li class="customItem">
+      <li class="card__list">
        
       {% if product.variants[0].featured_image.src %}
          {% assign customSrc = product.variants[0].featured_image.src %}
