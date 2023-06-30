@@ -34,7 +34,7 @@
            </select>
             
       <div class="card__quantityAndButton">
-         <quantity-input class="quantity " style="width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2); margin-top:0;" >
+         <quantity-input class="quantity card__quantity" style="width: calc(12rem / var(--font-body-scale) + var(--inputs-border-width) * 2); margin-top:0;" >
          <button class="quantity__button no-js-hidden" name="minus" type="button">
          <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
           {% render 'icon-minus' %}
