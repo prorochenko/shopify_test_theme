@@ -3389,17 +3389,3 @@ margin: 5px 0;
   font-size: 12px;
   margin-top: 10px;
 }
-
-
-
-.customOptions{
-    display:flex;
-  justify-content:center;
-  gap:10px;
-  align-items:center;
-}
-
-.card__title{
-    font-size: 16px;
-  font-weight: bold;
-}
