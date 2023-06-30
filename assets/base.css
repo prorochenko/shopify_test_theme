@@ -3386,20 +3386,9 @@ details-disclosure > details {
   border: 1px solid #000;
   padding-left: 10px;
   margin: 10px 0 0 0;
-  position: relative;
-
 }
 
-.card__select::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 20px; 
-  transform: translate(0, -50%) rotate(45deg);
-  border: solid #000;
-  border-width: 0 2px 2px 0;
-  padding: 3px;
-}
+
 
 .customButton{ 
   margin: 5px 0;
