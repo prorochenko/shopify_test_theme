@@ -3345,7 +3345,8 @@ details-disclosure > details {
 .card__description {
   font-size: 10px;
   margin: 10px 0;
-
+  height: 51px;
+  overflow: auto;
 }
 
 .card__image{
@@ -3391,8 +3392,6 @@ margin: 10px 0 0 0;
   padding-left: 10px;
   margin: 10px 0 0 0;
 }
-
-
 
 .customButton{ 
   background-color:#da554c;
