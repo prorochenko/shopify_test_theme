@@ -3399,11 +3399,11 @@ details-disclosure > details {
   height: 50px;
   padding:0;
    &:hover:not(.active) {
-    box-shadow: 0px 3px 15px 1px #7ecace;
+    box-shadow: 0px 3px 15px 1px #f28a49;
   }
   &:active {
     transform: translateY(-1px);
-    box-shadow: 0px 4px 13px 1px #c1e2e4;
+    box-shadow: 0px 4px 13px 1px #f28a49;
   }
 }
 
