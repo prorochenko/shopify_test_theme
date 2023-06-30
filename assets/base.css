@@ -3359,13 +3359,13 @@ details-disclosure > details {
   margin: 10px 0;
 }
 
-.card__list{
+.customList{
   display:flex;
   flex-wrap: wrap;
   list-style-type: none;
- 
+  gap: 30px;
 }
-.customItem{
+.card__list{
     width:300px;
 }
 .customSelect{
