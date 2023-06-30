@@ -3365,18 +3365,26 @@ details-disclosure > details {
   list-style-type: none;
   gap: 30px;
 }
+
 .card__list{
     width:300px;
 }
+
 .customSelect{
   margin-left: 15px;
 }
+
 .card__description{  
   font-size: 14px;
   width:300px;
   overflow: auto;
   margin: 5px 0;
 }
+
+.card__select{
+  width: 300px;
+}
+
 .customButton{
 margin: 5px 0;
   
