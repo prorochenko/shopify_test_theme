@@ -3380,7 +3380,8 @@ details-disclosure > details {
 .card__select{
   width: 300px;
   margin:0;
-  font-size: 14px;
+  font-size: 16px;
+  height: 20px;
 }
 
 .customButton{
